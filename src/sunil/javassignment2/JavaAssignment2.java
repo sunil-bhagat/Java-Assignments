@@ -20,7 +20,7 @@ public class JavaAssignment2 {
         int[] freqArray = new int[26];
         int count=0;
         for(char letter:input.toCharArray()){
-            if( letter!= ' ' && freqArray[letter-65]!=1){
+            if(letter>=65 && letter<=90 && freqArray[letter-65]!=1){
                 freqArray[letter-65]=1;
                 count++;
             }
