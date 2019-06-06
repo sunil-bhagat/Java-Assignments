@@ -1,6 +1,6 @@
 package sunil.javassignment1;
 
-/*
+/**
  * @author Sunil Bhagat
  */
 
@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 public class JavaAssignment1 {
-    /*
+    /**
      * This method search files recursively in directory and its sub-directories
      * @param expression  is the regex pattern to be matched with file names.
      * @param currentDir  is the current directory we're searching in.
