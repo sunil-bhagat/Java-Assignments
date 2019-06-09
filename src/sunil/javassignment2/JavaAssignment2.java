@@ -10,37 +10,34 @@ public class JavaAssignment2 {
 
     /**
      * This method checks if the given string contains all the alphabets or not.
+     *
      * @param input is the string entered by user.
-     * Time Complexity: O(n);
-     * Space Complexity: O(1);
+     *              Time Complexity: O(n);
+     *              Space Complexity: O(1);
      */
 
-    static boolean checkAlphabets(String input){
+    static boolean checkAlphabets(String input) {
         //frequency array to store the frequency of letters.
         int[] freqArray = new int[26];
-        int count=0;
-        for(char letter:input.toCharArray()){
-            if(letter>=65 && letter<=90 && freqArray[letter-65]!=1){
-                freqArray[letter-65]=1;
+        int count = 0;
+        for (char letter : input.toCharArray()) {
+            if (letter >= 65 && letter <= 90 && freqArray[letter - 65] != 1) {
+                freqArray[letter - 65] = 1;
                 count++;
             }
         }
-        if(count==26){
-            return true;
-        }else{
-            return false;
-        }
+        return count == 26;
 
     }
 
-    public static void  main(String[] args){
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the String.");
         String input = scan.nextLine();
-        boolean  check = checkAlphabets(input.toUpperCase());
-        if(check){
+        boolean check = checkAlphabets(input.toUpperCase());
+        if (check) {
             System.out.println("Input string contains all the alphabets.");
-        }else{
+        } else {
             System.out.println("Input string doesn't contains all the alphabets.");
         }
     }
