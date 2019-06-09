@@ -8,20 +8,24 @@ import java.util.Scanner;
 
 public class JavaAssignment4 {
     static void getKyc(String signUp, String current) {
+        //formats the date format.
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         Date currDate = new Date(), signDate = new Date();
         try {
+            //checks if the entered dates are in correct format
             signDate = formatter.parse(signUp);
             currDate = formatter.parse(current);
         } catch (Exception e) {
             System.out.println("Invalid Date format.");
             return;
         }
+        //convert date objects into calendar objects.
         Calendar signUpDate = Calendar.getInstance();
         Calendar currentDate = Calendar.getInstance();
         signUpDate.setTime(signDate);
         currentDate.setTime(currDate);
         signUpDate.set(Calendar.YEAR, currentDate.get(Calendar.YEAR));
+        //find the difference between anniversary and current date.
         long days = Duration.between(signUpDate.toInstant(), currentDate.toInstant()).toDays();
         Calendar startDate = (Calendar) signUpDate.clone();
         Calendar endDate = (Calendar) signUpDate.clone();
