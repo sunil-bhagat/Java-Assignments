@@ -1,7 +1,7 @@
 package sunil.incrementalassignment2;
 
 public class Reference {
-    Reference(String data){
+    Reference(String data) {
         System.out.println(data);
     }
 
