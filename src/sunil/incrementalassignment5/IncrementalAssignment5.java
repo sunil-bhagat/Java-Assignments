@@ -7,9 +7,13 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class IncrementalAssignment5 {
+    /**
+     * this method uses regex to check if it is in corret format.
+     * @param sentence
+     */
     static void checkexpression(String sentence){
         //matching the sentence to see if it begins with capital letter and ends with .
-        boolean check = Pattern.matches("[A-Z].*\\.",sentence);
+        boolean check = Pattern.matches("^[A-Z].*[.]$",sentence);
         if(check){
             System.out.println("Correct Format.");
         }else{

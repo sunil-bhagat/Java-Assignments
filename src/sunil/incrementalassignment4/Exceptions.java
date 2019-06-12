@@ -4,6 +4,7 @@ package sunil.incrementalassignment4;
  * @author Sunil Bhagat.
  */
 
+//creating three new exception classes.
 class Exception1 extends Exception{
     Exception1(String error){
         super(error);

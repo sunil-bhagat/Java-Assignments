@@ -18,7 +18,7 @@ public class JavaAssignment1 {
      */
 
 
-    static void getFiles(String expression, String currentDir) {
+    static void searchFiles(String expression, String currentDir) {
         File directory = new File(currentDir);
         if (directory.exists()) {
             //Store the list of all files in the current directory.
@@ -37,7 +37,7 @@ public class JavaAssignment1 {
                     }
                 } else if (files[i].isDirectory()) {
                     //check for files in sub-directories.
-                    getFiles(expression, files[i].getAbsolutePath());
+                    searchFiles(expression, files[i].getAbsolutePath());
                 }
             }
         } else {
@@ -54,7 +54,7 @@ public class JavaAssignment1 {
         String expression = scan.next();
         // Run until user enters -1
         while (!Pattern.matches(exit, expression)) {
-            getFiles(expression, "/home");
+            searchFiles(expression, "/home");
             System.out.println("Enter expression or -1 to exit.");
             expression = scan.next();
         }
