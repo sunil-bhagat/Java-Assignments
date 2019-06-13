@@ -43,7 +43,6 @@ public class Exceptions {
         } finally {
             System.out.println("finally block executed.");
         }
-
     }
     public static void main(String[] args){
         throwException(1);
