@@ -23,6 +23,10 @@ class Exception3 extends Exception{
 }
 
 public class Exceptions {
+    /**
+     * this method throws three user defined and NullPointer Exsception.
+     * @param num
+     */
     static void throwException(int num){
         try{
             if(num==1){
@@ -34,7 +38,7 @@ public class Exceptions {
             }else{
                 throw new  NullPointerException("NullPointerException");
             }
-        }catch (Exception e){
+        }catch (Exception1|Exception2|Exception3|NullPointerException e){
             System.out.println("Caught "+e.getMessage());
         } finally {
             System.out.println("finally block executed.");
