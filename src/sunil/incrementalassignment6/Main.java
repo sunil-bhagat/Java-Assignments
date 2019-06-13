@@ -69,14 +69,14 @@ class SListIterator<E> {
     public void remove() {
         Link<E> temp = head;
         if(temp.next == null){
-            System.out.println("UnderFlow");
+            System.out.println("List is already Empty.");
             return;
         }
         while(temp.next.next != null){
             temp = temp.next;
         }
         current = temp;
-        System.out.println("Deleting " + temp.next.data);
+        System.out.println(temp.next.data + " Deleted");
         temp.next = null;
 
     }
