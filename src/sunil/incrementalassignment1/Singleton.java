@@ -2,12 +2,16 @@ package sunil.incrementalassignment1;
 
 public class Singleton {
     String test;
+    private static Singleton instance;
+    private Singleton(String string){
+        test = string;
+    }
 
     static Singleton create(String string) {
-        /**test = string;
-         * we can initialized test as it is static variable and it can not be called from a non-static method.
-         */
-        return new Singleton();
+        if(instance==null){
+            instance  =  new Singleton(string);
+        }
+        return instance;
     }
 
     void printString() {

@@ -1,15 +1,15 @@
-package sunil.incrementalassignment1;
+package sunil.incrementalassignment1.data;
 
 public class Data {
     int globalInt;
     char globalChar;
 
-    void printGlobal() {
+   public  void printGlobal() {
         System.out.println(globalInt);
         System.out.println(globalChar);
     }
 
-    void printLocal() {
+    public void printLocal() {
         int localInt;
         char localChar;
         /**System.out.println(localInt);
